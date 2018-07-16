@@ -30,7 +30,7 @@ app.set("view engine", "handlebars");
 
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/savedArticles");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/savedArticles");
 
 /////// Routes ////////
 
